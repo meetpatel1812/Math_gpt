@@ -3,11 +3,15 @@ from groq import Groq
 
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 st.set_page_config(page_icon="💬", page_title="Math GPT by Meet Patel")
-hide_github_icon = """
-#GithubIcon {
-  visibility: hidden;
-}
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .stApp {overflow: hidden;}
+    header {visibility: hidden;}
+    </style>
 """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 # Sidebar for API key input and model selection
 with st.sidebar:
