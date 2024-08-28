@@ -1,5 +1,11 @@
 import streamlit as st
 from groq import Groq
+hide_github_icon = """
+#GithubIcon {
+  visibility: hidden;
+}
+"""
+st.markdown(hide_github_icon, unsafe_allow_html=True)
 st.set_page_config(page_icon="💬", page_title="Math GPT by Meet Patel")
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 # Sidebar for API key input and model selection
