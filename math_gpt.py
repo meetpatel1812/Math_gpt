@@ -1,10 +1,11 @@
 import streamlit as st
 from groq import Groq
 
-st.markdown(hide_github_icon, unsafe_allow_html=True)
+
 st.set_page_config(page_icon="💬", page_title="Math GPT by Meet Patel")
 hide_streamlit_style = """
     <style>
+    #GithubIcon {visibility: hidden;}
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     .stApp {overflow: hidden;}
